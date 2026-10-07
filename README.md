@@ -49,35 +49,37 @@
 
 ***
 
-### 3. Case study 2 — iTutorGroup: Phần mềm tự động loại ứng viên lớn tuổi
+&#32;3\. Case study 2 — McDonald’s McHire: Lỗ hổng làm dữ liệu ứng viên có thể bị truy cập trái phép
 
 #### Brief Case
 
-- Tổ chức / sản phẩm AI: iTutorGroup và phần mềm tuyển dụng trực tuyến của doanh nghiệp.
-- Thời gian, địa điểm / bối cảnh: Hoạt động tuyển giáo viên tiếng Anh làm việc từ xa tại Hoa Kỳ trong năm 2020; EEOC công bố thỏa thuận giải quyết ngày 11/09/2023.
-- AI được dùng để làm gì: Tiếp nhận và tự động sàng lọc hồ sơ ứng tuyển giáo viên trực tuyến.
-- Vấn đề hoặc sự kiện đáng chú ý: Theo vụ kiện của EEOC, phần mềm được lập trình để tự động từ chối ứng viên nữ từ 55 tuổi trở lên và ứng viên nam từ 60 tuổi trở lên.
-- Số liệu có nguồn: Hơn 200 ứng viên đủ điều kiện tại Hoa Kỳ bị từ chối vì tuổi. Thỏa thuận yêu cầu chi trả tổng cộng 365.000 USD. EEOC sẽ giám sát việc tuân thủ trong ít nhất 5 năm hoặc lâu hơn nếu doanh nghiệp tuyển dụng trở lại tại Hoa Kỳ.
-- Nguồn: “iTutorGroup to Pay $365,000 to Settle EEOC Discriminatory Hiring Suit” — U.S. Equal Employment Opportunity Commission — 11/09/2023 — [URL (https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit)](<https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit>) — phần mô tả quy tắc loại theo tuổi, số ứng viên và nội dung thỏa thuận.
-- Phân biệt bằng chứng và nhận định: EEOC xác nhận nội dung cáo buộc, số người bị ảnh hưởng và thỏa thuận giải quyết. Vì vụ việc được giải quyết bằng thỏa thuận, không nên trình bày rằng tòa án đã xét xử và kết luận toàn bộ cáo buộc là sự thật.
+- Tổ chức / sản phẩm AI: McDonald’s McHire và chatbot tuyển dụng Olivia do Paradox.ai phát triển.
+- Thời gian, địa điểm / bối cảnh: Hoa Kỳ, tháng 6–7/2025; McHire được các nhà hàng nhượng quyền McDonald’s sử dụng để tiếp nhận và xử lý hồ sơ ứng tuyển.
+- AI được dùng để làm gì: Chatbot Olivia thu thập thông tin ứng viên, thực hiện bước sàng lọc ban đầu, hỏi về thời gian làm việc, chuyển ứng viên tới bài đánh giá và hỗ trợ đặt lịch phỏng vấn.
+- Vấn đề hoặc sự kiện đáng chú ý: Hai nhà nghiên cứu bảo mật Ian Carroll và Sam Curry truy cập được một tài khoản quản trị thử nghiệm bằng tên đăng nhập và mật khẩu `123456`. Sau đó, họ phát hiện lỗi kiểm soát truy cập trong API cho phép thay đổi ID để xem hồ sơ ứng viên khác.
+- Số liệu có nguồn: Dãy ID cho thấy lỗi có khả năng cho phép truy cập tối đa khoảng **64 triệu bản ghi ứng tuyển**. Con số này là phạm vi có khả năng truy cập, không phải 64 triệu người đã chắc chắn bị đánh cắp dữ liệu. Theo phản hồi của Paradox được các nguồn dẫn lại, các nhà nghiên cứu chỉ xem một số ít hồ sơ để xác minh lỗi và không có bằng chứng tài khoản thử nghiệm đã bị bên thứ ba khác sử dụng.
+- Nguồn:
+  - “Poor Passwords Tattle on AI Hiring Bot Maker Paradox.ai” — Brian Krebs, KrebsOnSecurity — tháng 7/2025 — [URL (https://krebsonsecurity.com/2025/07/poor-passwords-tattle-on-ai-hiring-bot-maker-paradox-ai/)](<https://krebsonsecurity.com/2025/07/poor-passwords-tattle-on-ai-hiring-bot-maker-paradox-ai/>) — phần mô tả mật khẩu yếu và dữ liệu ứng viên có thể bị truy cập.
+  - “Fast Food, Weak Passwords: McDonald’s AI Hiring Tool Exposed Millions of Applicants’ Data” — Chris Bernard, TechRepublic — 10/07/2025 — [URL (https://www.techrepublic.com/article/news-mcdonalds-applicants-ai-hiring-tool-security-vulnerability/)](<https://www.techrepublic.com/article/news-mcdonalds-applicants-ai-hiring-tool-security-vulnerability/>) — phần mô tả chatbot Olivia, tài khoản quản trị và phạm vi bản ghi.
+  - “McDonald’s security blunder exposes job applicants’ data” — Leonard Bernardone, Australian Computer Society — 14/07/2025 — [URL (https://ia.acs.org.au/article/2025/mcdonald-s-security-blunder-exposes-job-applicants--data.html)](<https://ia.acs.org.au/article/2025/mcdonald-s-security-blunder-exposes-job-applicants--data.html>) — phần mô tả dữ liệu, lỗi bảo mật và con số 64 triệu.
+- Phân biệt bằng chứng và nhận định: Nguồn xác nhận các nhà nghiên cứu truy cập được hệ thống bằng thông tin đăng nhập yếu và có thể chuyển giữa các bản ghi ứng viên. Khoảng 64 triệu là ước tính về số bản ghi có khả năng truy cập, không phải số hồ sơ đã bị tải xuống hoặc số nạn nhân đã chịu lạm dụng dữ liệu. Chưa có bằng chứng công khai cho thấy kẻ xấu đã khai thác lỗi trước khi nó được khắc phục.
 
-#### Harm Map Worksheet
 
 #### Harm Map Worksheet
 
 | Trường | Phân tích của tôi |
 |---|---|
-| High-risk moment | Khi phần mềm kiểm tra tuổi và giới tính rồi tự động từ chối hồ sơ trước khi ứng viên được con người xem xét. |
-| Stakeholder bị ảnh hưởng | Hơn 200 ứng viên lớn tuổi bị mất cơ hội được xem xét tuyển dụng khi phần mềm áp dụng ngưỡng tuổi. iTutorGroup chịu chi phí dàn xếp và trách nhiệm tuân thủ. Học viên có thể mất cơ hội học với những giáo viên đủ năng lực. |
-| Failure mode | **Bias / fairness** — hệ thống tạo kết quả bất lợi trực tiếp dựa trên tuổi và giới tính. |
-| Layer bắt đầu lỗi | **Safety** — hệ thống không ngăn chặn mà còn thực thi một quy tắc sàng lọc phân biệt đối xử. Nguồn không công bố kiến trúc kỹ thuật, vì vậy đây là phân loại theo chức năng bảo vệ bị thiếu, không phải khẳng định về cấu trúc phần mềm. |
-| Harm xảy ra là gì? | Theo EEOC, hơn 200 ứng viên đủ điều kiện tại Hoa Kỳ đã bị từ chối vì tuổi. Đây là hậu quả đã xảy ra theo cáo buộc được giải quyết bằng thỏa thuận, không chỉ là nguy cơ giả định. |
-| Harm lens | **Opportunity loss** và **dignity loss**. |
-| Severity | **High** — ứng viên bị mất cơ hội việc làm và thu nhập do đặc điểm không phản ánh năng lực. Không chọn Critical vì nguồn không ghi nhận tổn hại thể chất nghiêm trọng hoặc hậu quả không thể phục hồi. |
-| Scale | **Hơn 200 ứng viên đủ điều kiện tại Hoa Kỳ**, theo EEOC. |
-| Probability | **High đối với ứng viên thuộc điều kiện loại** vì quy tắc được áp dụng tự động khi hồ sơ đáp ứng ngưỡng tuổi và giới tính. Nguồn không cung cấp tỷ lệ trên tổng số hồ sơ. |
-| Frequency | **High trong phạm vi nhóm bị áp dụng quy tắc** vì cùng một điều kiện tự động có thể lặp lại với mỗi hồ sơ phù hợp. Tổng số lần phần mềm chạy không được công bố. |
-| Vì sao? | EEOC nêu rõ ngưỡng tuổi, cơ chế từ chối tự động, hơn 200 người bị ảnh hưởng và khoản dàn xếp 365.000 USD. Tuy nhiên, nguồn chỉ gọi đây là phần mềm ứng tuyển trực tuyến, không đủ bằng chứng để khẳng định hệ thống sử dụng machine learning hay mô hình AI. |
+| High-risk moment | Khi thông tin do ứng viên cung cấp cho chatbot được lưu trong McHire và có thể được truy xuất qua tài khoản quản trị cùng API thiếu kiểm tra quyền trên từng hồ sơ. |
+| Stakeholder bị ảnh hưởng | Ứng viên bị mất quyền kiểm soát dữ liệu khi người không có thẩm quyền xem thông tin liên hệ và nội dung ứng tuyển. McDonald’s và các nhà hàng nhượng quyền có thể mất uy tín. Paradox.ai phải chịu trách nhiệm về bảo mật nền tảng do mình cung cấp. |
+| Failure mode | **Privacy leak** — hệ thống cho phép truy cập dữ liệu không nên được công khai cho tài khoản hoặc người dùng không có thẩm quyền. |
+| Layer bắt đầu lỗi | **Safety** — tài khoản thử nghiệm dùng thông tin đăng nhập rất yếu và API không kiểm tra đầy đủ quyền truy cập đối với từng bản ghi. Đây là lỗi bảo vệ hệ thống, không phải lỗi suy luận của mô hình AI. |
+| Harm xảy ra là gì? | Một số hồ sơ đã được các nhà nghiên cứu xem để xác nhận lỗ hổng. Tên, email, số điện thoại và nội dung trao đổi của ứng viên có nguy cơ bị truy cập trái phép. Chưa có bằng chứng công khai về việc toàn bộ dữ liệu bị tải xuống hoặc bị kẻ xấu khai thác. |
+| Harm lens | **Privacy loss**; có thể dẫn đến **dignity loss** nếu nội dung ứng tuyển hoặc bài đánh giá cá nhân bị công khai hoặc sử dụng sai mục đích. |
+| Severity | **High** — dữ liệu tuyển dụng có thể được dùng cho phishing, giả mạo hoặc gây tổn hại danh tiếng. Không chọn Critical vì chưa có bằng chứng về tổn hại thể chất nghiêm trọng hoặc việc toàn bộ dữ liệu đã bị khai thác. |
+| Scale | **High về phạm vi có khả năng bị ảnh hưởng** — lỗi có thể cho phép truy cập khoảng 64 triệu bản ghi ứng tuyển. Đây là số bản ghi tiềm năng, không phải 64 triệu người đã được xác nhận là nạn nhân. |
+| Probability | **High đối với khả năng khai thác kỹ thuật** vì tài khoản sử dụng thông tin đăng nhập dễ đoán và các nhà nghiên cứu đã chứng minh có thể truy cập hồ sơ khác. **Chưa đủ dữ liệu** để đánh giá xác suất kẻ xấu đã khai thác lỗi. |
+| Frequency | **Chưa đủ dữ liệu để đánh giá.** Lỗi cho phép lặp lại việc thay đổi ID để truy cập nhiều hồ sơ, nhưng không có dữ liệu công khai về số lần truy cập trái phép trước khi được khắc phục. |
+| Vì sao? | Các nhà nghiên cứu đã chứng minh chuỗi lỗi gồm tài khoản quản trị bảo vệ yếu và thiếu kiểm tra quyền trên từng bản ghi. Tuy nhiên, cần phân biệt phạm vi hệ thống có thể bị truy cập với thiệt hại thực tế đã xác nhận. Với **Hệ thống đang xét**, CV, câu trả lời phỏng vấn và thông tin liên hệ phải được bảo vệ bằng xác thực thật, phân quyền theo từng người dùng và kiểm tra quyền ở mọi API. |
 
 ***
 
